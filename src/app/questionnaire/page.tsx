@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { questions, experiences, skills } from '@/lib/questions';
 import type { QuestionResponse } from '@/types';
 
@@ -110,9 +111,13 @@ export default function QuestionnairePage() {
         <div className="max-w-3xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="MVCC Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <h1 className="text-lg font-semibold text-gray-900">Spiritual Growth Assessment</h1>
             </div>
             <span className="text-sm text-gray-500">

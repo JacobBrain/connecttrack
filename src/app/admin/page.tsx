@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Assessment {
   id: string;
@@ -90,9 +91,13 @@ export default function AdminDashboard() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="MVCC Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <div>
                 <h1 className="text-lg font-semibold text-gray-900">ConnectTrack Admin</h1>
                 <p className="text-xs text-gray-500">Assessment Dashboard</p>

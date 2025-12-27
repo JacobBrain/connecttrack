@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -39,9 +40,13 @@ export default function Home() {
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">M</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="MVCC Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <div>
               <h1 className="text-lg font-semibold text-gray-900">ConnectTrack</h1>
               <p className="text-xs text-gray-500">Mountain View Community Church</p>

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Recommendation, RecommendationCategory } from '@/types';
 
 // This page uses dynamic data fetching
@@ -135,9 +136,13 @@ export default async function ResultsPage({ params }: PageProps) {
       <header className="bg-white shadow-sm">
         <div className="max-w-3xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="MVCC Logo"
+              width={32}
+              height={32}
+              className="rounded-lg"
+            />
             <h1 className="text-lg font-semibold text-gray-900">ConnectTrack Results</h1>
           </div>
         </div>

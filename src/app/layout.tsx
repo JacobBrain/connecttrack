@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "ConnectTrack | Mountain View Community Church",
   description: "Discover your next steps in spiritual growth with personalized recommendations from MVCC.",
   keywords: ["spiritual growth", "church", "MVCC", "Mountain View Community Church", "faith journey"],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
